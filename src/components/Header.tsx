@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { FaBars } from 'react-icons/fa'
 import { useState } from 'react'
 
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -19,15 +20,13 @@ const Header = () => {
         >
           NemcaTech
         </motion.h1>
-        <nav className="hidden md:block">
-          <ul className="flex space-x-4">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+        <nav className="hidden md:flex space-x-4">
+          <a href="#services" className="text-white underline">Services</a>
+          <a href="#about" className="text-white underline">About</a>
+          <a href="#contact" className="text-white underline">Contact</a>
         </nav>
         <button
-          className="md:hidden"
+          className="md:hidden text-2xl"
           onClick={() => setIsOpen(!isOpen)}
         >
           <FaBars />
@@ -40,9 +39,9 @@ const Header = () => {
           className="md:hidden"
         >
           <ul className="flex flex-col items-center space-y-2 mt-4">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a className='text-white' href="#services">Services</a></li>
+            <li><a className='text-white' href="#about">About</a></li>
+            <li><a className='text-white' href="#contact">Contact</a></li>
           </ul>
         </motion.nav>
       )}
