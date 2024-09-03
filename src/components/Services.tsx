@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { FaRocket, FaUserTie, FaRobot, FaSearch } from 'react-icons/fa'
+import { Helmet } from 'react-helmet'
 
 const services = [
   { icon: <FaRocket />, title: 'Rapid Software Development', description: 'Launch your venture with high-quality, fast-paced software development.' },
@@ -11,6 +12,10 @@ const services = [
 const Services = () => {
   return (
     <section id="services" className="py-20 bg-gray-100">
+      <Helmet>
+        <title>Our Services | NemcaTech</title>
+        <meta name="description" content="Explore NemcaTech's range of services including rapid software development, CTO as a Service, AI business automation, and tech due diligence." />
+      </Helmet>
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-600">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { FaBars } from 'react-icons/fa'
 import { useState } from 'react'
-
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,12 +18,12 @@ const Header = () => {
           whileHover={{ scale: 1.1 }}
           className="text-2xl font-bold"
         >
-          NemcaTech
+          <Link to="/">NemcaTech</Link>
         </motion.h1>
         <nav className="hidden md:flex space-x-4">
-          <a href="#services" className="text-white underline">Services</a>
-          <a href="#about" className="text-white underline">About</a>
-          <a href="#contact" className="text-white underline">Contact</a>
+          <Link to="/services" className="text-white underline">Services</Link>
+          <Link to="/about" className="text-white underline">About</Link>
+          <Link to="/contact" className="text-white underline">Contact</Link>
         </nav>
         <button
           className="md:hidden text-2xl"
@@ -39,9 +39,9 @@ const Header = () => {
           className="md:hidden"
         >
           <ul className="flex flex-col items-center space-y-2 mt-4">
-            <li><a className='text-white' href="#services">Services</a></li>
-            <li><a className='text-white' href="#about">About</a></li>
-            <li><a className='text-white' href="#contact">Contact</a></li>
+            <li><Link className='text-white' to="/services">Services</Link></li>
+            <li><Link className='text-white' to="/about">About</Link></li>
+            <li><Link className='text-white' to="/contact">Contact</Link></li>
           </ul>
         </motion.nav>
       )}
